@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaspVfx.Runtime", "LaspVfx.Runtime.csproj", "{2d0045c7-cfbf-0dbf-ac3e-e58c3f24e262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{b544c3cf-0b8d-296c-9f75-3a716e639d93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2d0045c7-cfbf-0dbf-ac3e-e58c3f24e262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2d0045c7-cfbf-0dbf-ac3e-e58c3f24e262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2d0045c7-cfbf-0dbf-ac3e-e58c3f24e262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2d0045c7-cfbf-0dbf-ac3e-e58c3f24e262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{b544c3cf-0b8d-296c-9f75-3a716e639d93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{b544c3cf-0b8d-296c-9f75-3a716e639d93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{b544c3cf-0b8d-296c-9f75-3a716e639d93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{b544c3cf-0b8d-296c-9f75-3a716e639d93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "com.teppich.teppichstools": "0.0.27",
+    "com.unity.ide.rider": "2.0.7",
     "com.unity.render-pipelines.high-definition": "10.6.0",
     "com.unity.textmeshpro": "3.0.6",
     "jp.keijiro.klak.motion": "1.0.2",
