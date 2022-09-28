@@ -52,10 +52,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Packages\jp.keijiro.laspvfx\Runtime\VFXWaveformBinder.cs" />
      <Compile Include="Packages\jp.keijiro.laspvfx\Runtime\VFXAudioLevelBinder.cs" />
      <Compile Include="Packages\jp.keijiro.laspvfx\Runtime\VFXSpectrumBinder.cs" />
      <Compile Include="Packages\jp.keijiro.laspvfx\Runtime\VFXAudioGainBinder.cs" />
-     <Compile Include="Packages\jp.keijiro.laspvfx\Runtime\VFXWaveformBinder.cs" />
      <None Include="Packages\jp.keijiro.laspvfx\Runtime\LaspVfx.Runtime.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Engines/Unity Versions/2020.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

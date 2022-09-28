@@ -55,6 +55,9 @@
      <Compile Include="Assets\Code\DemoController.cs" />
      <Compile Include="Assets\Code\AudioCode\AudioDataGrabber.cs" />
      <Compile Include="Assets\Code\PlayAudioEndApp.cs" />
+     <Compile Include="Assets\Code\AudioCode\VibratingSphere.cs" />
+     <Compile Include="Assets\Code\AudioCode\AudioSampleData.cs" />
+     <Compile Include="Assets\Code\AudioCode\ParticleFiller.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Engines/Unity Versions/2020.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -586,17 +589,14 @@
  <Reference Include="Unity.TextMeshPro">
  <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Burst.Editor">
- <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
  <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Searcher.Editor">
  <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <Reference Include="Unity.Burst.Editor">
+ <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
  <Reference Include="TeppichsToolsEditor">
  <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/TeppichsToolsEditor.dll</HintPath>
@@ -604,8 +604,14 @@
  <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
  <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
  <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
@@ -651,9 +657,6 @@
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
  <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/GitRepos/Deadline2022LaspVfxFork/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

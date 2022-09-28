@@ -41,11 +41,20 @@ public class AudioDataGrabber : MonoBehaviour
             frequencyBandHighest[i] = audioProfileStartValue;
     }
 
-    public static event Action<float[], float[]> ProvideSampleData;
+    public static event Action<AudioSampleData> ProvideSampleData;
 
     private void GetSpectrumAudioSource() => audioSource.GetSpectrumData(samples, 0, FFTWindow.Blackman);
 
-    private void BroadcastData() => ProvideSampleData?.Invoke(samples, frequencyBand);
+    private void BroadcastData() => ProvideSampleData?.Invoke(new AudioSampleData
+    {
+        bandBuffer              = bandBuffer,
+        bufferDecrease          = bufferDecrease,
+        frequencyBand           = frequencyBand,
+        frequencyBandHighest    = frequencyBandHighest,
+        normalizedBandBuffer    = normalizedBandBuffer,
+        normalizedFrequencyBand = normalizedFrequencyBand,
+        samples                 = samples
+    });
 
     private void MakeFrequencyBands()
     {
@@ -78,7 +87,7 @@ public class AudioDataGrabber : MonoBehaviour
             if (frequencyBand[i] < bandBuffer[i])
             {
                 bandBuffer[i]     -= bufferDecrease[i];
-                bufferDecrease[i] *= 1.2f;
+                bufferDecrease[i] *= 1.05f;
             }
         }
     }
