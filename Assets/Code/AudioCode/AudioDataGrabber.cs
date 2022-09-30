@@ -53,7 +53,9 @@ public class AudioDataGrabber : MonoBehaviour
         frequencyBandHighest    = frequencyBandHighest,
         normalizedBandBuffer    = normalizedBandBuffer,
         normalizedFrequencyBand = normalizedFrequencyBand,
-        samples                 = samples
+        samples                 = samples,
+        amplitude               = amplitude,
+        amplitudeBuffer         = amplitudeBuffer
     });
 
     private void MakeFrequencyBands()

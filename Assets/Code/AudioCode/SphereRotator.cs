@@ -31,8 +31,9 @@ namespace Code.AudioCode
         {
             if (isRotating)
                 myTransform.localRotation =
-                    Quaternion.AngleAxis(intensityFactor * (data.normalizedBandBuffer[index] + 0.1f), Vector3.forward)
-                    * myTransform.localRotation;
+                    Quaternion
+                        .AngleAxis(intensityFactor * (data.normalizedBandBuffer[index] + 0.1f * data.amplitudeBuffer),
+                                   Vector3.forward) * myTransform.localRotation;
         }
 
         public void StartRotating() => isRotating = true;

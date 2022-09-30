@@ -7,4 +7,6 @@
     public float[] normalizedBandBuffer;
     public float[] normalizedFrequencyBand;
     public float[] samples;
+
+    public float amplitude, amplitudeBuffer;
 }

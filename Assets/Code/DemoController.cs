@@ -9,13 +9,22 @@ public class DemoController : MonoBehaviour
     [SerializeField] private GameObject spheres;
 
     [SerializeField] private GameObject firstParticles;
+    [SerializeField] private GameObject tohuwabohuParticles;
 
     [SerializeField] private List<SphereRotator> sphereRotators = new List<SphereRotator>();
 
-    private void Start() => StartCoroutine(DemoRoutine());
+    [SerializeField] private AudioSource audioSource;
+
+    private void Start()
+    {
+        StartCoroutine(DemoRoutine());
+        StartCoroutine(QuitRoutine());
+    }
 
     private IEnumerator DemoRoutine()
     {
+        audioSource.Play();
+
         float waitForRotation = beatTime;
 
         yield return new WaitForSeconds(waitForRotation);
@@ -28,5 +37,25 @@ public class DemoController : MonoBehaviour
 
         spheres.SetActive(false);
         firstParticles.SetActive(true);
+
+        while (Application.isPlaying)
+        {
+            yield return new WaitForSeconds(beatTime * 2f);
+
+            firstParticles.SetActive(false);
+            tohuwabohuParticles.SetActive(true);
+
+            yield return new WaitForSeconds(beatTime * 2f);
+
+            firstParticles.SetActive(true);
+            tohuwabohuParticles.SetActive(false);
+        }
+    }
+
+    private IEnumerator QuitRoutine()
+    {
+        yield return new WaitUntil(() => !audioSource.isPlaying);
+
+        QuitHelper.Quit();
     }
 }
