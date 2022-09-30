@@ -9,16 +9,12 @@ namespace Code.AudioCode
 
         private Transform myTransform;
 
-        private void Awake()
-        {
-            myTransform = transform;
+        private void Awake() => myTransform = transform;
 
-            AudioDataGrabber.ProvideSampleData += ReactToAudio;
-        }
+        private void OnEnable()  => AudioDataGrabber.ProvideSampleData += ReactToAudio;
+        private void OnDisable() => AudioDataGrabber.ProvideSampleData -= ReactToAudio;
 
-        private void OnDestroy() => AudioDataGrabber.ProvideSampleData -= ReactToAudio;
-
-        private void ReactToAudio(AudioSampleData data) =>
-            myTransform.localScale = 20f * data.normalizedBandBuffer[index] * Vector3.one;
+        private void ReactToAudio(AudioSampleData data) => myTransform.localScale =
+            Mathf.Min(10f * data.normalizedBandBuffer[index], 1.3f) * Vector3.one;
     }
 }

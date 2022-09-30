@@ -52,12 +52,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Code\AudioCode\ParticleFiller.cs" />
      <Compile Include="Assets\Code\DemoController.cs" />
      <Compile Include="Assets\Code\AudioCode\AudioDataGrabber.cs" />
-     <Compile Include="Assets\Code\PlayAudioEndApp.cs" />
      <Compile Include="Assets\Code\AudioCode\VibratingSphere.cs" />
+     <Compile Include="Assets\Code\PlayAudioEndApp.cs" />
      <Compile Include="Assets\Code\AudioCode\AudioSampleData.cs" />
-     <Compile Include="Assets\Code\AudioCode\ParticleFiller.cs" />
+     <Compile Include="Assets\TimeScaler.cs" />
+     <Compile Include="Assets\Code\AudioCode\SphereRotator.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Engines/Unity Versions/2020.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
