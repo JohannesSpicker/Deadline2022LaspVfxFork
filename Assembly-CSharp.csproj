@@ -57,10 +57,10 @@
      <Compile Include="Assets\Code\AudioCode\AudioDataGrabber.cs" />
      <Compile Include="Assets\Code\AudioCode\VibratingSphere.cs" />
      <Compile Include="Assets\Code\QuitHelper.cs" />
+     <Compile Include="Assets\PostProcessScrambler.cs" />
      <Compile Include="Assets\Code\AudioCode\AudioSampleData.cs" />
      <Compile Include="Assets\Code\AudioCode\SphereRotator.cs" />
      <Compile Include="Assets\TunnelRotator.cs" />
-     <Compile Include="Assets\PostProcessScrambler.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Engines/Unity Versions/2020.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
