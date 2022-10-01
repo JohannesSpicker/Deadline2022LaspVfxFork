@@ -22,11 +22,24 @@ public class PostProcessScrambler : MonoBehaviour
     private IEnumerator ScramblingRoutine()
     {
         VolumeParameter<float> volumeParameter = new VolumeParameter<float>();
-        volumeParameter.value = 0f;
+        volumeParameter.value = -1f;
 
         lensDistortion.intensity.SetValue(volumeParameter);
 
-        yield return new WaitForSeconds(3f * beatTime);
+        Ticker shortTicker = new Ticker(.25f * beatTime);
+
+        while (!shortTicker.Tick(Time.deltaTime))
+        {
+            volumeParameter.value = Mathf.Clamp(-shortTicker.Remaining / (.25f * beatTime), -1f, 0f);
+            lensDistortion.intensity.SetValue(volumeParameter);
+
+            yield return null;
+        }
+
+        volumeParameter.value = 0f;
+        lensDistortion.intensity.SetValue(volumeParameter);
+
+        yield return new WaitForSeconds(2.75f * beatTime);
 
         yield return new WaitForSeconds(beatTime * 1.5f);
 
