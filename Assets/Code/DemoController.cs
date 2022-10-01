@@ -7,11 +7,13 @@ public class DemoController : MonoBehaviour
 {
     private const            float      beatTime = 13.7f;
     [SerializeField] private GameObject spheres;
+    [SerializeField] private GameObject secondSpheres;
 
     [SerializeField] private GameObject firstParticles;
     [SerializeField] private GameObject tohuwabohuParticles;
 
-    [SerializeField] private List<SphereRotator> sphereRotators = new List<SphereRotator>();
+    [SerializeField] private List<SphereRotator> sphereRotators       = new List<SphereRotator>();
+    [SerializeField] private List<SphereRotator> secondSphereRotators = new List<SphereRotator>();
 
     [SerializeField] private AudioSource audioSource;
 
@@ -25,17 +27,22 @@ public class DemoController : MonoBehaviour
     {
         audioSource.Play();
 
-        float waitForRotation = beatTime;
-
-        yield return new WaitForSeconds(waitForRotation);
+        yield return new WaitForSeconds(beatTime);
 
         foreach (SphereRotator rotator in sphereRotators)
             rotator.StartRotating();
 
-        //yield return new WaitForSeconds(41f - waitForRotation);
-        yield return new WaitForSeconds(beatTime * 2f);
+        yield return new WaitForSeconds(beatTime);
+
+        secondSpheres.SetActive(true);
+
+        foreach (SphereRotator rotator in secondSphereRotators)
+            rotator.StartRotating();
+
+        yield return new WaitForSeconds(beatTime);
 
         spheres.SetActive(false);
+        secondSpheres.SetActive(false);
         firstParticles.SetActive(true);
 
         while (Application.isPlaying)

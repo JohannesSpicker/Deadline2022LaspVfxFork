@@ -6,5 +6,5 @@ public class TunnelRotator : MonoBehaviour
     private                  Transform myTransform;
 
     private void Awake()  => myTransform = transform;
-    private void Update() => myTransform.rotation = Quaternion.AngleAxis(speed, Vector3.left) * myTransform.rotation;
+    private void Update() => myTransform.rotation = Quaternion.AngleAxis(speed, Vector3.forward) * myTransform.rotation;
 }
